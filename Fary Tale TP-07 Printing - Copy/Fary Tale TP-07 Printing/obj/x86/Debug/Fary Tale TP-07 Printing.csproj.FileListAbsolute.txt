@@ -1,0 +1,14 @@
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\bin\Debug\Fary Tale TP-07 Printing.exe
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\bin\Debug\Fary Tale TP-07 Printing.pdb
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\bin\Debug\FaryTaleUsbPrinting.dll
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\MainWindow.baml
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\MainWindow.g.cs
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\App.g.cs
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\Fary Tale TP-07 Printing_MarkupCompile.cache
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\Fary Tale TP-07 Printing.g.resources
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\Fary_Tale_TP_07_Printing.Properties.Resources.resources
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\Fary Tale TP-07 Printing.exe
+c:\documents and settings\awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Debug\Fary Tale TP-07 Printing.pdb

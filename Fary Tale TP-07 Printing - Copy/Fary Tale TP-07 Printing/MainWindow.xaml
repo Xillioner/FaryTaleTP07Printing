@@ -1,0 +1,165 @@
+﻿<Window x:Class="Fary_Tale_TP_07_Printing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="516" Width="838" Closing="Window_Closing">
+    <Grid>
+        <TextBox Height="285" HorizontalAlignment="Left" Margin="12,29,0,0" Name="textBox1" VerticalAlignment="Top" Width="280" TextWrapping="Wrap" AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" AcceptsTab="True" />
+        <Button Content="Выход" Height="23" HorizontalAlignment="Left" Margin="136,319,0,0" x:Name="buttonExit" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Button Content="HT" Height="23" HorizontalAlignment="Left" Margin="329,12,0,0" Name="buttonHT" VerticalAlignment="Top" Width="75" ToolTip="Горизонтальная табуляция" Click="buttonHT_Click" IsEnabled="False" />
+        <Button Content="LF" Height="23" HorizontalAlignment="Left" Margin="329,41,0,0" Name="buttonLF" VerticalAlignment="Top" Width="75" ToolTip="Печать и прокрутка" Click="buttonLF_Click" IsEnabled="False" />
+        <Button Content="Новая строка" Height="23" HorizontalAlignment="Left" Margin="329,70,0,0" Name="buttonFF" VerticalAlignment="Top" Width="75" ToolTip="Печать и метка подачи к печати со стартовой позиции" Click="buttonFF_Click" FontSize="10" IsEnabled="False" />
+        <Button Content="DLE EOT" Height="23" HorizontalAlignment="Left" Margin="329,99,0,0" Name="buttonDLEEOT" VerticalAlignment="Top" Width="75" ToolTip="Передача настоящего статуса времени" Click="buttonDLEEOT_Click" IsEnabled="False">
+            <Button.ContextMenu>
+                <ContextMenu>
+
+                    <MenuItem Header="Передать статус принтера"></MenuItem>
+                    <MenuItem Header="Передать статус off-line"></MenuItem>
+                    <MenuItem Header="Передать статус ошибки"></MenuItem>
+                    <MenuItem Header="Передать статус датчика бумаги"></MenuItem>
+                    <MenuItem Header="Передать статус датчика презентера"></MenuItem>
+                    <MenuItem Header="Передать статус датчика ретрактора"></MenuItem>
+                    <MenuItem Header="Передать статус вход бумаги"></MenuItem>
+                    <MenuItem Header="Передать статус выход бумаги"></MenuItem>
+                    <MenuItem Header="Передать расширенный статус"></MenuItem>
+                    <MenuItem Header="Передать статус каретки и датчика движения бумаги"></MenuItem>
+                </ContextMenu>
+            </Button.ContextMenu>
+
+
+        </Button>
+        <Button Content="Сброс ошибки" Height="23" HorizontalAlignment="Left" Margin="329,128,0,0" Name="buttonDLEENQ" VerticalAlignment="Top" Width="75" ToolTip="Запрос настоящего времени у принтера" Click="buttonDLEENQ_Click" FontSize="10" />
+        <Button Content="Пробел справа" Height="23" HorizontalAlignment="Left" Margin="329,157,0,0" Name="buttonESCSP" VerticalAlignment="Top" Width="75" ToolTip="Настроить символ пробела с правой стороны ESC SP" Click="buttonESCSP_Click" FontSize="10" />
+        <Button Content="Режим печати" Height="23" HorizontalAlignment="Left" Margin="329,186,0,0" Name="buttonESCs1" VerticalAlignment="Top" Width="75" ToolTip="Выбрать режимы печати ESC !" Click="buttonESCs1_Click" FontSize="10">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Шрифт символа">
+                        <MenuItem Header="Шрифт A" IsCheckable="True" StaysOpenOnClick="True" Name="menuItemESCs1CharFontA" Click="menuItemESCs1CharFontA_Click"></MenuItem>
+                        <MenuItem Header="Шрифт Б" IsCheckable="True" StaysOpenOnClick="True" Name="menuItemESCs1CharFontB" Click="menuItemESCs1CharFontB_Click"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Выделенный" IsCheckable="True" StaysOpenOnClick="True" Name="menuItemESCs1Emphasized" Click="menuItemESCs1Emphasized_Click"></MenuItem>
+                    <MenuItem Header="Двойной высоты" IsCheckable="True" StaysOpenOnClick="True"></MenuItem>
+                    <MenuItem Header="Двойной шырины" IsCheckable="True" StaysOpenOnClick="True"></MenuItem>
+                    <MenuItem Header="Подчёркнутый" IsCheckable="True" StaysOpenOnClick="True" Name="menuItemESCs1Underline" Click="menuItemPrintModeUnderline_Click"></MenuItem>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+        <Button Content="ESC $" Height="23" HorizontalAlignment="Left" Margin="329,215,0,0" Name="buttonESCs4" VerticalAlignment="Top" Width="75" ToolTip="Установить абсолютную позицию печти" Click="buttonESCs4_Click" />
+        <Button Content="ESC %" Height="23" HorizontalAlignment="Left" Margin="329,244,0,0" Name="buttonESCs5" VerticalAlignment="Top" Width="75" ToolTip="Выбрать / Отменить набор символов определённый пользователем" Click="buttonESCs5_Click" />
+        <Button Content="ESC &amp;" Height="23" HorizontalAlignment="Left" Margin="329,273,0,0" Name="buttonESCs7" VerticalAlignment="Top" Width="75" ToolTip="Загрузить определённые пользователем символы" Click="buttonESCs7_Click" />
+        <Button Content="ESC *" Height="23" HorizontalAlignment="Left" Margin="409,12,0,0" Name="buttonESCs8" VerticalAlignment="Top" Width="75" ToolTip="Выбрать режим битового изображения" Click="buttonESCs8_Click" />
+        <Button Content="ESC -" Height="23" HorizontalAlignment="Left" Margin="409,41,0,0" Name="buttonESCsMINUS" VerticalAlignment="Top" Width="75" ToolTip="Включить / выключить режим подчёркивания" Click="buttonESCsMINUS_Click" />
+        <Button Content="ESC 2" Height="23" HorizontalAlignment="Left" Margin="409,70,0,0" Name="buttonESC2" VerticalAlignment="Top" Width="75" ToolTip="Настроить 1/6&quot; линии пробел" Click="buttonESC2_Click" />
+        <Button Content="Инит принтера" Height="23" HorizontalAlignment="Left" Margin="409,157,0,0" Name="buttonESCs2" VerticalAlignment="Top" Width="75" ToolTip="Инициализация принтера" Click="buttonESCs2_Click" FontSize="10" />
+        <Button Content="ESC ?" Height="23" HorizontalAlignment="Left" Margin="409,128,0,0" Name="buttonESCsQUESTIONSIGN" VerticalAlignment="Top" Width="75" ToolTip="Отмена определённых пользователем символов" Click="buttonESCsQUESTIONSIGN_Click" />
+        <Button Content="ESC 3" Height="23" HorizontalAlignment="Left" Margin="409,99,0,0" Name="buttonESC3" VerticalAlignment="Top" Width="75" ToolTip="Установить пробелы на линии микрошагами" Click="buttonESC3_Click" />
+        <Button Content="ESC D" Height="23" HorizontalAlignment="Left" Margin="409,186,0,0" Name="buttonESCD" VerticalAlignment="Top" Width="75" ToolTip="Установить горизонтальную позицию табуляции" />
+        <Button Content="ESC E" Height="23" HorizontalAlignment="Left" Margin="409,215,0,0" Name="buttonESCE" VerticalAlignment="Top" Width="75" ToolTip="Включить / выключить режим выделения" />
+        <Button Content="ESC G" Height="23" HorizontalAlignment="Left" Margin="409,244,0,0" Name="buttonESCG" VerticalAlignment="Top" Width="75" ToolTip="Включить / выключить режим двойного удара" />
+        <Button Content="ESC J" Height="23" HorizontalAlignment="Left" Margin="409,273,0,0" Name="buttonESCJ" VerticalAlignment="Top" Width="75" ToolTip="Напечатать и протянуть бумагу" />
+        <Button Content="ESC K" Height="23" HorizontalAlignment="Left" Margin="489,12,0,0" Name="buttonESCK" VerticalAlignment="Top" Width="75" ToolTip="Обратная протяжка" />
+        <Button Content="ESC M" Height="23" HorizontalAlignment="Left" Margin="489,41,0,0" Name="buttonESCM" VerticalAlignment="Top" Width="75" ToolTip="Выбрать шрифт символа" />
+        <Button Content="ESC R" Height="23" HorizontalAlignment="Left" Margin="489,70,0,0" Name="buttonESCR" VerticalAlignment="Top" Width="75" ToolTip="Выбрать международный символьный набор" />
+        <Button Content="ESC V" Height="23" HorizontalAlignment="Left" Margin="489,99,0,0" Name="buttonESCV" VerticalAlignment="Top" Width="75" ToolTip="Установить / Оменить повернутую печать" />
+        <Button Content="ESC \" Height="23" HorizontalAlignment="Left" Margin="489,128,0,0" Name="buttonESCLEFTSLASH" VerticalAlignment="Top" Width="75" ToolTip="Установить родственника позиции печати" />
+        <Button Content="Распол печати" Height="23" HorizontalAlignment="Left" Margin="489,157,0,0" Name="buttonESCa" VerticalAlignment="Top" Width="75" ToolTip="Выбрать подтверждение" Click="buttonESCa_Click" FontSize="10" />
+        <Button Content="ESC c 4" Height="23" HorizontalAlignment="Left" Margin="489,186,0,0" Name="buttonESCc4" VerticalAlignment="Top" Width="75" ToolTip="Выбор датчика для остановки печати" />
+        <Button Content="ESC c 5" Height="23" HorizontalAlignment="Left" Margin="489,215,0,0" Name="buttonESCc5" VerticalAlignment="Top" Width="75" ToolTip="Позволить / запетить промотку на панели принтера" />
+        <Button Content="ESC d" Height="23" HorizontalAlignment="Left" Margin="489,244,0,0" Name="buttonESCd" VerticalAlignment="Top" Width="75" ToolTip="Напечатать и промотать бумаги на несколько линий" />
+        <Button Content="ESC e" Height="23" HorizontalAlignment="Left" Margin="489,273,0,0" Name="buttonESCSMALLE" VerticalAlignment="Top" Width="75" ToolTip="Промотка назад на несколько линий" />
+        <Button Content="Кодировки" Height="23" HorizontalAlignment="Left" Margin="569,12,0,0" Name="buttonESCt" VerticalAlignment="Top" Width="75" ToolTip="Выбрать кодовую таблицу символов" FontSize="10" >
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="PC437 (USA, Standard Europe)"/>
+                    <MenuItem Header="Katakana"/>
+                    <MenuItem Header="PC850 (Multilingual)"/>
+                    <MenuItem Header="PC860 (Portuguese)"/>
+                    <MenuItem Header="PC863 (Canadian-French)"/>
+                    <MenuItem Header="PC865 (Nordic)"/>
+                    <MenuItem Header="WPC 1252"/>
+                    <MenuItem x:Name="MenuItemCodeTablePC8660" Header="PC866 (Cyrillic #2)" Click="MenuItemCodeTablePC866_Click"/>
+                    <MenuItem Header="PC 852 (Latin 2)"/>
+                    <MenuItem Header="PC858 (Euro)"/>
+                    <MenuItem Header="Space page"/>
+
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+        <Button Content="ESC w n 1" Height="23" HorizontalAlignment="Left" Margin="569,41,0,0" Name="buttonESCwn1" VerticalAlignment="Top" Width="75" ToolTip="Восстановить последний символ кодовой таблицы перед проблом на странице" />
+        <Button Content="ESC {" Height="23" HorizontalAlignment="Left" Margin="569,70,0,0" Name="buttonESCLEFTFIGURECOLUMN" VerticalAlignment="Top" Width="75" ToolTip="Включить / выключить режим печати вверх тормашками" />
+        <Button Content="GS FF" Height="23" HorizontalAlignment="Left" Margin="569,99,0,0" Name="buttonGSFF" VerticalAlignment="Top" Width="75" ToolTip="Подача метки к стартовой позиции" />
+        <Button Content="GS !" Height="23" HorizontalAlignment="Left" Margin="569,128,0,0" Name="buttonGSs1" VerticalAlignment="Top" Width="75" ToolTip="Выбрать размер символа" />
+        <Button Content="GS ( A" Height="23" HorizontalAlignment="Left" Margin="569,157,0,0" Name="buttonGSA" VerticalAlignment="Top" Width="75" ToolTip="Выполнить тестовую печать" Click="buttonGSA_Click" />
+        <Button Content="GS ( E" Height="23" HorizontalAlignment="Left" Margin="569,186,0,0" Name="buttonGSE" VerticalAlignment="Top" Width="75" ToolTip="Кастомизовать NV память" />
+        <Button Content="GS ( F" Height="23" HorizontalAlignment="Left" Margin="569,215,0,0" Name="buttonGSF" VerticalAlignment="Top" Width="75" ToolTip="Установить корректировочные значения" />
+        <Button Content="GS ( K" Height="23" HorizontalAlignment="Left" Margin="569,244,0,0" Name="buttonGSK" VerticalAlignment="Top" Width="75" ToolTip="Выбрать методы контроля печати" />
+        <Button Content="GS ( L" Height="23" HorizontalAlignment="Left" Margin="569,273,0,0" Name="buttonGSL" VerticalAlignment="Top" Width="75" ToolTip="Выбрать графические данные NVRAM" />
+        <Button Content="GS ( M" Height="23" HorizontalAlignment="Left" Margin="649,12,0,0" Name="buttonGSM" VerticalAlignment="Top" Width="75" ToolTip="Кастомизовать контрольные значения принтера" />
+        <Button Content="GS *" Height="23" HorizontalAlignment="Left" Margin="649,41,0,0" Name="buttonGSs8" VerticalAlignment="Top" Width="75" ToolTip="Определить загруженное битовое изображение" />
+        <Button Content="GS /" Height="23" HorizontalAlignment="Left" Margin="649,70,0,0" Name="buttonGSRIGHTSLASH" VerticalAlignment="Top" Width="75" ToolTip="Печатать загруженное битовое изображение" />
+        <Button Content="GS B" Height="23" HorizontalAlignment="Left" Margin="649,99,0,0" Name="buttonGSB" VerticalAlignment="Top" Width="75" ToolTip="Включить / выключить реверсивный режим" />
+        <Button Content="GS I" Height="23" HorizontalAlignment="Left" Margin="649,128,0,0" Name="buttonGSI" VerticalAlignment="Top" Width="75" ToolTip="Передать ID принтера" Click="buttonGSI_Click" />
+        <Button Content="GS L" Height="23" HorizontalAlignment="Left" Margin="649,157,0,0" Name="buttonGSL2" VerticalAlignment="Top" Width="75" ToolTip="Установить левое поле" />
+        <Button Content="GS P" Height="23" HorizontalAlignment="Left" Margin="649,186,0,0" Name="buttonGSP" VerticalAlignment="Top" Width="75" ToolTip="Установить основной расчётный шаг" />
+        <Button Content="GS T" Height="23" HorizontalAlignment="Left" Margin="649,215,0,0" Name="buttonGST" VerticalAlignment="Top" Width="75" ToolTip="Установить печатную позицию на начало печатной линии" />
+        <Button Content="Обрезать лист" Height="23" HorizontalAlignment="Left" Margin="649,244,0,0" Name="buttonGSV" VerticalAlignment="Top" Width="75" ToolTip="Выбрать режим резки и резки бумаги" Click="buttonGSV_Click" FontSize="10" />
+        <Button Content="GS W" Height="23" HorizontalAlignment="Left" Margin="649,273,0,0" Name="buttonGSW" VerticalAlignment="Top" Width="75" ToolTip="Установить ширину зоны печати" />
+        <Button Content="GS a" Height="23" HorizontalAlignment="Left" Margin="729,12,0,0" Name="buttonGSa" VerticalAlignment="Top" Width="75" ToolTip="Разрешить / запретить автоматический возврат статуса" ClipToBounds="False" />
+        <Button Content="GS g 0" Height="23" HorizontalAlignment="Left" Margin="729,41,0,0" Name="buttonGSg0" VerticalAlignment="Top" Width="75" ToolTip="Инициализировать счётчик обслуживания" />
+        <Button Content="GS g 2" Height="23" HorizontalAlignment="Left" Margin="729,70,0,0" Name="buttonGSg2" VerticalAlignment="Top" Width="75" ToolTip="Передать счётчик обслуживания" />
+        <Button Content="GS r" Height="23" HorizontalAlignment="Left" Margin="729,99,0,0" Name="buttonGSr" VerticalAlignment="Top" Width="75" ToolTip="Передать статус" />
+        <Button Content="GS v 0" Height="23" HorizontalAlignment="Left" Margin="729,99,0,0" Name="buttonGSv0" VerticalAlignment="Top" Width="75" ToolTip="Напечатать растровое битовое изображение" />
+        <Button Content="FS ( z" Height="23" HorizontalAlignment="Left" Margin="729,128,0,0" Name="buttonFSz" VerticalAlignment="Top" Width="75" ToolTip="Управляющие возможности устройства" />
+        <Button Content="ESC * 1" Height="23" HorizontalAlignment="Left" Margin="729,186,0,0" Name="buttonESCs81" VerticalAlignment="Top" Width="75" ToolTip="Выбрать режим битового изображения - линейная графика" />
+        <Button Content="ESC * b" Height="23" HorizontalAlignment="Left" Margin="729,215,0,0" Name="buttonESCs8b" VerticalAlignment="Top" Width="75" ToolTip="Включить / Выключить TIFF сжатие" />
+        <Button Content="FS j" Height="23" HorizontalAlignment="Left" Margin="729,244,0,0" Name="buttonFSj" VerticalAlignment="Top" Width="75" ToolTip="Напечатать и длинно промотать" />
+        <Button Content="ESC [ ! t" Height="23" HorizontalAlignment="Left" Margin="729,273,0,0" Name="buttonESCt2" VerticalAlignment="Top" Width="75" ToolTip="Установить управляющий цикл" />
+        <Button Content="ESC [ ! s" Height="23" HorizontalAlignment="Left" Margin="729,302,0,0" Name="buttonESCs" VerticalAlignment="Top" Width="75" ToolTip="Начало работы" />
+        <Button Content="ESC [ ! e" Height="23" HorizontalAlignment="Left" Margin="729,331,0,0" Name="buttonESCe" VerticalAlignment="Top" Width="75" ToolTip="Конец работы" />
+        <Button x:Name="buttonSend" Content="Отправить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="217,319,0,0" Height="23" Click="buttonSend_Click"/>
+        <Menu Height="23" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="292">
+            <MenuItem Header="Кодировки" >
+                <MenuItem Header="PC437 (USA, Standard Europe)" Name="MenuItemCodeTablePC437" Click="MenuItemCodeTablePC437_Click" />
+                <MenuItem Header="Katakana" Name="MenuItemCodeTableKatakana" Click="MenuItemCodeTableKatakana_Click" />
+                <MenuItem Header="PC850 (Multilingual)" Name="MenuItemCodeTablePC850" Click="MenuItemCodeTablePC850_Click" />
+                <MenuItem Header="PC860 (Portuguese)" Name="MenuItemCodeTablePC860" Click="MenuItemCodeTablePC860_Click" />
+                <MenuItem Header="PC863 (Canadian-French)" Name="MenuItemCodeTablePC863" Click="MenuItemCodeTablePC863_Click" />
+                <MenuItem Header="PC865 (Nordic)" Name="MenuItemCodeTablePC865" Click="MenuItemCodeTablePC865_Click" />
+                <MenuItem Header="WPC 1252" Name="MenuItemCodeTableWPC1252" Click="MenuItemCodeTableWPC1252_Click" />
+                <MenuItem x:Name="MenuItemCodeTablePC866" Header="PC866 (Cyrillic #2)" Click="MenuItemCodeTablePC866_Click"/>
+                <MenuItem Header="PC 852 (Latin 2)" Name="MenuItemCodeTablePC852" Click="MenuItemCodeTablePC852_Click" />
+                <MenuItem Header="PC858 (Euro)" Name="MenuItemCodeTablePC858" Click="MenuItemCodeTablePC858_Click" />
+                <MenuItem Header="Space page" Name="MenuItemCodeTableSpacePage" Click="MenuItemCodeTableSpacePage_Click" />
+            </MenuItem>
+            <MenuItem Header="Комманды принтеру" >
+                <MenuItem Header="Передать статус принтера" Name="menuItemPrinterStatus" Click="menuItemPrinterStatus_Click"></MenuItem>
+                <MenuItem Header="Передать статус off-line" Name="menuItemOffLineStatus" Click="menuItemOffLineStatus_Click"></MenuItem>
+                <MenuItem Header="Передать статус ошибки" Name="menuItemErrorStatus" Click="menuItemErrorStatus_Click"></MenuItem>
+                <MenuItem Header="Передать статус датчика бумаги" Name="menuItemPaperSensorStatus" Click="menuItemPaperSensorStatus_Click"></MenuItem>
+                <MenuItem Header="Передать статус датчика презентера" Name="menuItemPresenterSensorStatus" Click="menuItemPresenterSensorStatus_Click"></MenuItem>
+                <MenuItem Header="Передать статус датчика ретрактора" Name="menuItemRetractorSensorStatus" Click="menuItemRetractorSensorStatus_Click"></MenuItem>
+                <MenuItem Header="Передать статус вход бумаги" Name="menuItemInputMediumStatus" Click="menuItemInputMediumStatus_Click"></MenuItem>
+                <MenuItem Header="Передать статус выход бумаги" Name="menuItemOutputMediumStatus" Click="menuItemOutputMediumStatus_Click"></MenuItem>
+                <MenuItem Header="Передать расширенный статус" Name="menuItemExtendedErrorStatus" Click="menuItemExtendedErrorStatus_Click"></MenuItem>
+                <MenuItem Header="Передать статус каретки и датчика движения бумаги" Name="menuItemCarrierHomeAndPaperMotionSensorStatus" Click="menuItemCarrierHomeAndPaperMotionSensorStatus_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Настройки">
+                <MenuItem Header="Выбрать режим отреза" ToolTip="GS V m / GS V m n" Name="menuItemGSVMN" Click="menuItemGSVMN_Click" />
+            </MenuItem>
+        </Menu>
+        <Label  Content="Режим резки - Полный отрез" Height="28" HorizontalAlignment="Left" Margin="329,302,0,0" Name="labelCutMode" VerticalAlignment="Top" />
+        <Label Content="Отступ справа от символа - 2" Height="28" HorizontalAlignment="Left" Margin="329,326,0,0" Name="labelRightSideSpacing" VerticalAlignment="Top" />
+        <GroupBox Header="Режим печати" Height="125" HorizontalAlignment="Left" Margin="495,302,0,0" Name="groupBoxPrintMode" VerticalAlignment="Top" Width="200">
+            <Grid Height="104">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="181*" />
+                    <ColumnDefinition Width="7*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="Размер шрифта - 14x24" HorizontalAlignment="Left" Margin="6,6,0,70" Name="labelPrintModeFont" />
+                <Label Content="Обращение цвета - Выключено" Height="28" HorizontalAlignment="Left" Margin="6,23,0,0" Name="labelPrintModeEmphasized" VerticalAlignment="Top" />
+                <Label Content="Двойная высота - Выключено" Height="28" HorizontalAlignment="Left" Margin="6,40,0,0" Name="labelPrintModeDoubleHeight" VerticalAlignment="Top" />
+                <Label Content="Двойная ширина - Выключено" Height="28" HorizontalAlignment="Left" Margin="6,59,0,0" Name="labelPrintModeDoubleWidth" VerticalAlignment="Top" />
+                <Label Content="Подчёркивание - Выключено" Height="28" HorizontalAlignment="Left" Margin="6,76,0,0" Name="labelPrintModeUnderline" VerticalAlignment="Top" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

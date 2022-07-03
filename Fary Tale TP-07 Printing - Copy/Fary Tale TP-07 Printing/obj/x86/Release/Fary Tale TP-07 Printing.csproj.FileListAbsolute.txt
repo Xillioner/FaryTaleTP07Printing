@@ -1,0 +1,22 @@
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\bin\Release\Fary Tale TP-07 Printing.exe
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\bin\Release\Fary Tale TP-07 Printing.pdb
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\bin\Release\LibUsbDotNet.dll
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\bin\Release\LibUsbDotNet.xml
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\MainWindow.baml
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\MainWindow.g.cs
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\App.g.cs
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary Tale TP-07 Printing_MarkupCompile.cache
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary Tale TP-07 Printing.g.resources
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary_Tale_TP_07_Printing.Properties.Resources.resources
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary Tale TP-07 Printing.exe
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary Tale TP-07 Printing.pdb
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary_Tale_TP07_Printing.FormESC3.resources
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary_Tale_TP07_Printing.FormEscS4.resources
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary_Tale_TP07_Printing.FormEscS5.resources
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary_Tale_TP07_Printing.formEscSMinus.resources
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary_Tale_TP07_Printing.FormESCsQUESTIONSIGN.resources
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary_Tale_TP07_Printing.FormWithScrollBarESCs8.resources
+C:\Documents and Settings\Awesome4444\my documents\visual studio 2010\Projects\Fary Tale TP-07 Printing\Fary Tale TP-07 Printing\obj\x86\Release\Fary_Tale_TP_07_Printing.FormGSVmn.resources
